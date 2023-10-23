@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chao theo time</title>
+        <style>
+            .greeting{
+                font-size: 24px;
+            }
+            .morning{
+                color: green;
+            }
+
+            .afternoon{
+                color: blue;
+            }
+
+            .evening{
+                color: red;
+            }
+
+            .time{
+                font-size: 18px;
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="greeting" class="greeting">Xin chao</div>
+        <p id="time">Thoi gian day du:</p>
+
+        <script>
+            var greetingElement = document.getElementById('greeting');
+            var greeting = '';
+            var className = '';
+            var currentTime = new Date();
+            var currentHour = currentTime.getHours();
+
+            if (currentHour < 12){
+                greeting = 'chao buoi sang';
+                className = 'morning';
+            } else if (currentHour <18){
+                greeting = 'chao buoi chieu';
+                className = 'afternoon';
+            }else {
+                greeting = 'chao buoi toi';
+                className = 'evening';
+            }
+            greetingElement.textContent = greeting;
+            greetingElement.className = className;
+
+            var elTime = document.getElementById('time');
+            elTime.textContent = `Time: ${currentTime}`;
+            elTime.className = 'time';
+        </script>
+    </body>
+</html>

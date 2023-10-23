@@ -1,0 +1,22 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    padding: 8px; 
+    border: 10px outset #143849; 
+    word-wrap: break-word;
+    text-align: center;
+    background-color: rgb(154, 157, 108);
+}
+h1{
+    color: antiquewhite;
+}
+.morning{
+    color: green;
+}
+.afternoon{
+    color: blue;
+}
+.evening{
+    color: red;
+}
