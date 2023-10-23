@@ -14,7 +14,7 @@ body {
 
 /* Responsive page rules at bottom of style sheet */
 h1 {
-  background-image: url('images/kinglogo.png');
+  background-image: url('/c06/images/kinglogo.png');
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
@@ -74,7 +74,7 @@ li {
 
 li a {
   color: #fff;
-  background-image: url('images/icon-link.png');
+  background-image: url('/c06/images/icon-link.png');
   background-position: right, center;
   background-repeat: no-repeat;
   text-decoration: none;
@@ -118,7 +118,7 @@ p {
 .complete {
   background-color: #999;
   color: #fff;
-  background-image: url("images/icon-trash.png");
+  background-image: url("/c06/images/icon-trash.png");
   background-position: right, center;
   background-repeat: no-repeat;
   border-top: 1px solid #666;
@@ -193,23 +193,23 @@ select, option {
 
 #feedback, #termsHint {
   color: #fff;
-  background-image: url('images/warning.png');
+  background-image: url('/c06/images/warning.png');
   background-repeat: no-repeat;
   background-position: 2px 14px;
   padding: 10px 0 0 22px;
 }
 
 #feedback.warning {
-  background-image: url('images/warning.png');
+  background-image: url('/c06/images/warning.png');
 }
 
 #feedback.tip {
-  background-image: url('images/tip.png');
+  background-image: url('/c06/images/tip.png');
 }
 
 #packageHint {
   color: #fff;
-  background-image: url('images/hint.png');
+  background-image: url('/c06/images/hint.png');
   background-repeat: no-repeat;
   background-position: 2px 5px;
   padding-left: 22px;
@@ -338,11 +338,11 @@ div.button {
 
 /* Example */
 a[data-state='stop'] {
-  background-image: url('images/pause.png');
+  background-image: url('/c06/images/pause.png');
 }
 
 a[data-state='record'] {
-  background-image: url('images/record.png');
+  background-image: url('/c06/images/record.png');
 }
 
 #buttons {
@@ -396,7 +396,7 @@ a[data-state='record'] {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   h1 {
-    background-image: url('images/2xkinglogo.png');
+    background-image: url('/c06/images/2xkinglogo.png');
     background-size: 72px 72px;
   }
 }
