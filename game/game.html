@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #game {
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+
+    <script>
+        const game = document.getElementById('game');
+        const player1 = document.createElement('div');
+        const player2 = document.createElement('div');
+
+        player1.style.width = '50px';
+        player1.style.height = '50px';
+        player1.style.backgroundColor = 'red';
+
+        player2.style.width = '50px';
+        player2.style.height = '50px';
+        player2.style.backgroundColor = 'blue';
+
+        game.appendChild(player1);
+        game.appendChild(player2);
+
+        let player1Position = 0;
+        let player2Position = 0;
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'a') {
+                player1Position += 10;
+                player1.style.transform = `translateX(${player1Position}px)`;
+            } else if (event.key === 'l') {
+                player2Position += 10;
+                player2.style.transform = `translateX(${player2Position}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
