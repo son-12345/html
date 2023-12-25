@@ -40,35 +40,10 @@ INSERT INTO Orders VALUES (1, 2, '11-18-13', 'In Process');
 INSERT INTO Orders VALUES (123, 3, '11-18-19', 'In Process');
 INSERT INTO Orders VALUES (13, 1, '12-12-23', 'In Process');
 
-CREATE TABLE OrderDetails (
-	OrderID INT,
-	ProductID INT,
-	Price INT,
-	Quantity INT,
-	PRIMARY KEY (OrderID, ProductID),
-	FOREIGN KEY (OrderID) REFERENCES Orders (OrderID),
-	FOREIGN KEY (ProductID) REFERENCES Product (ProductID)
-);
-
-INSERT INTO OrderDetails VALUES (123, 1, 1000, 1);
-INSERT INTO OrderDetails VALUES (123, 2, 200, 2);
-INSERT INTO OrderDetails VALUES (123, 3, 100, 1);
-
-INSERT INTO OrderDetails VALUES (13, 2, 200, 1);
-INSERT INTO OrderDetails VALUES (13, 3, 3000, 1);
-INSERT INTO OrderDetails VALUES (13, 1, 2400, 1);
-
-INSERT INTO OrderDetails VALUES (1, 3, 100, 1);
-INSERT INTO OrderDetails VALUES (1, 2, 2400, 1);
-
-INSERT INTO OrderDetails VALUES (2, 2, 200, 1);
-INSERT INTO OrderDetails VALUES (2, 3, 3000, 1);
-
 
 SELECT * FROM Customer;
 SELECT * FROM Product;
 SELECT * FROM Orders;
-SELECT * FROM OrderDetails;
 
 SELECT DISTINCT Name FROM Customer
 
@@ -82,11 +57,8 @@ SELECT * FROM Customer ORDER BY Name
 
 SELECT * FROM Product ORDER BY Price DESC
 
-SELECT TenHang,  SoLuong  FROM DangSachCacMatHang
-WHERE MaSDH IN (SELECT MaSDH FROM DonDatHang WHERE NguoiDH = 'Nguyễn Văn An');
+SELECT COUNT(DISTINCT CustomerID) AS TotalCustomers FROM Customer
 
-SELECT COUNT(DISTINCT NguoiDH) AS TotalCustomers FROM DonDatHang
+SELECT COUNT(DISTINCT ProductID) AS TotalItems FROM Product
 
-SELECT COUNT(DISTINCT TenHang) AS TotalItems FROM DangSachCacMatHang
 
-SELECT MaSDH , SUM(ThanhTien) AS OrderTotal FROM DangSachCacMatHang GROUP BY  MaSDH
